@@ -65,7 +65,7 @@ router.post('/login', (req, res) => {
 });
 // auth.verifyLogin, auth.verifyAdmin,
 //read method
-router.get('/userall', auth.verifyLogin, (req, res) => {
+router.get('/userall', auth.verifyLogin, auth.verifyAdmin, (req, res) => {
   User.find()
     .then((data) => {
       res.status(200).json(data);

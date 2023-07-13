@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
@@ -11,7 +11,8 @@ import Register2 from './component/Register2';
 import User from './component/User';
 import User2 from './component/User2';
 import Update from './component/Update';
-
+import Logout from './component/Logout';
+import Reducer from './component/Reducer';
 function App() {
   return (
     <>
@@ -27,6 +28,8 @@ function App() {
         <Route path="/getUser" exact element={<User />} />
         <Route path="/getUser2" exact element={<User2 />} />
         <Route path="/updateuser/:id" exact element={<Update />} />
+        <Route path="/logout" exact element={<Logout />} />
+        <Route path="/reducer" exact element={<Reducer />} />
       </Routes>
     </>
   );
